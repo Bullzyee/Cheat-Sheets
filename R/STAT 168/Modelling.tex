@@ -1,0 +1,74 @@
+#I. Relational Operators x DataCamp
+# ==,!=, &, |, !(e.g is.numeric(), !is.numeric("hey"))
+linked_in <- c(16, 9,16)
+linked_in > 10 #returns TRUE FALSE TRUE
+"goodbye" != "hello" #returns false
+
+#& vs && and | vs ||
+#Illustration:
+#c(TRUE, TRUE, FALSE) & c(TRUE, FALSE, FALSE) #returns TRUE FALSE FALSE but
+#c(TRUE, TRUE, FALSE) & c(TRUE, FALSE, FALSE) #returns only TRUE, only access the first element
+#Accessing data frame 2nd column example: name <- li_df[,2]
+
+
+#II. Conditional Statements in R x DataCamp
+
+
+
+
+
+#III. While Loop in R x Datacamp
+while(condition){
+  expr  
+} #somewhat same as C
+
+while(ctr <= 7){
+  print(paste(""counter is set to ", ctr)) #just like in C, paste is used to concatenate stings and numbers yada yada
+  ctr  <- ctr + 1 #how much does ctr will increment per loop
+}
+if we just set ctr <- 1 before loop and we didn't use the increment concept (ctr <- ctr+1), then the program will run indefinitely
+
+#break statement:
+ctr <- 1
+while(ctr <=7){
+   if (ctr%%5==0){ #it breaks wen R finds it 
+   break
+   }
+   #otherwise 
+   print(paste("ctr is set to", ctr))
+   ctr <- ctr + 1
+}
+
+#e.g.
+# Initialize the speed variable
+speed <- 64
+
+# Extend/adapt the while loop
+while (speed > 30) {
+  print(paste("Your speed is", speed))
+  if (speed > 48) {
+    print("Slow down big time!")
+    speed <- speed - 11
+  } else {
+    print("Slow down!")
+    speed <- speed - 6
+  }
+}
+#Output: 
+[1] "Your speed is 64"
+[1] "Slow down big time!"
+[1] "Your speed is 53"
+[1] "Slow down big time!"
+[1] "Your speed is 42"
+[1] "Slow down!"
+[1] "Your speed is 36"
+[1] "Slow down!"
+
+
+
+
+
+
+
+
+
