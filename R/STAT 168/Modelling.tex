@@ -65,8 +65,28 @@ while (speed > 30) {
 [1] "Slow down!"
 
 
+#FOR LOOP x DATA_CAMP
+e.g. new_york <- c("newyork", "Thailand", "Luzon")
+for(cities in new_york){
+  print(cities)
+} #also works in lists.
 
-
+#break statement - a statement that breaks the for loop altogether
+e.g  new_york <- c("newyork", "Thailand", "Luzon")
+      for(cities in new_york){
+          if(nchar(cities) == 6){
+            break
+          }
+          print(cities)
+      }
+#next statement - skips the current loop and proceed to another
+e.g  new_york <- c("newyork", "Thailand", "Luzon")
+      for(cities in new_york){
+          if(nchar(cities) == 6){
+            next 
+          }
+          print(cities)
+      }
 
 
 
