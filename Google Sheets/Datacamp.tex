@@ -16,3 +16,13 @@ and the second argument is the range containing the logical values to filter on.
 For example, if the data (not including the header row) is in A2:E10,
 and the final column E contains the logical values to filter on,
 you would type =FILTER(A2:E10, E2:E10). Basically, only true will be displayed.
+
+#DATA CLEANING (IMPORTANT)
+Formatting Numbers Commands
+=TO_DOLLARS(CELL) - Converts data to dollars
+=TO_PERCENT(CELL) - obviously converts number to percent, it get multiplies by 100
+=N(CELL) - converts a cell to a numeric data. If you use N() to logical, it will give you 0 or 1
+GOATED command:
+CONVERT(cell, "measurement", "masurement") - e.g. CONVERT(A2, "ft^2", "m^2") 
+
+#COMMON DATA TRANSFORMATION
