@@ -26,3 +26,44 @@ GOATED command:
 CONVERT(cell, "measurement", "masurement") - e.g. CONVERT(A2, "ft^2", "m^2") 
 
 #COMMON DATA TRANSFORMATION
+LOG10() - takes a number or cell location, and returns the log, base 10.
+LN() - natural log
+SQRT - square root
+EXP() - eulers number raised to a particular value
+
+
+#Rounding Numbers:
+ROUND()  - round to the nearest whole number
+ROUND(cell, 2) - round off with 2 decimal places
+ROUND(cell, -2) - Rounds to the nearest 100
+CEILING()
+FLOOR() 
+
+FLOOR() and CEILING() will round negative numbers towards or away from negative infinity.
+That is, FLOOR(-1.5) is -2 and CEILING(-1.5) is -1.
+Sometimes you may wish to round them towards or away from zero.
+
+Google Sheets has two related functions called FLOOR.MATH() 
+and CEILING.MATH(). When given one or two arguments, 
+they behave in the same way as FLOOR() and CEILING() respectively.
+However, you can pass a third argument that determined the direction
+of the rounding: passing a positive number (for example, 1) to a third argument 
+to make them round in the positive direction - towards zero. If not, then negative 1
+That is, FLOOR.MATH(-1.57, 0.1, 1) is -1.5 and CEILING.MATH(-1.57, 0.1, 1) is -1.6.
+
+
+#GENERATING RANDOM NUMBERS
+RAND() -without argument
+RANDBETWEEN(num1,num2) - obvious. But it always returns WHOLE NUMBER ONLY
+NORMINV(RAND(), 0, 1) - uses to generate random numbers to create uniform numbers(normal ). Upper and lower size estimates
+NORM(RAND()) - same shit
+
+#Logical Operations
+  
+
+
+
+
+
+
+
