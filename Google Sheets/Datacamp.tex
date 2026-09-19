@@ -85,7 +85,30 @@ ISERR() - does not consider missing value as error
 
 
 #CELL ADDRESSES
+ADDRESS(cell, cell) - returns absolute cell addresses
+instead if passing a value, you pass an address
+e.g. cell A2 is 99. ADDRESS(2,1) result is $A$2
+using INDIRECT(C2), the result is 99
 
+OFFSET(cell, number, number) - passing a reference cell
+INDEX() - understands if the data is out of range
+
+#Lookup Vs. Matching
+
+VLOOKUP(cell of interest, absolute range, number of columns that contains the values to be merged in, FALSE )
+e.g table 1 has 2 col: id and nspec
+table 2 has 2 col. then
+
+VLOOKUP(cell of interest, absolute range, number of columns that contains the values to be merged in )
+
+SORT(absolute range, number of cols to be sorted, TRUE)
+TRUE - ascending
+FALSE - descending
+
+MATCH() - allows you to find values in a sorted data set 
+MATCH(value we want to find, absolute_range, -1)
+-1 if descending
+1 - if ascending
 
 
 
