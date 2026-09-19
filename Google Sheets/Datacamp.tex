@@ -70,9 +70,21 @@ e.g IF(cell > 0, "postive", "negative")
 If you want to do a lot of conditions, use IFS()
 e.g IFS(A2, "1st", B2, "2nd")
 NOTE THAT YOU CAN ALSO USE OR and AND inside IF and IFS
- SWITCH() - instead of logical values, it matches texts rather than logical conditions  
- 
+SWITCH() - instead of logical values, it matches texts rather than logical conditions  
+e.g SWITCH(cell, "none", 1, "young",2)
+
+ #BLANK, MISSING VALUES ERROR
+ Remember ISBLANK(cell)
+ There is a function that counts blank: COUNTBLANK()
+ If you perform calculation on the blank cell, the excel will treat it as 0. Which is very dangerous
+ Solution:
+ IF(ISBLANK(cell), NA(), cell) - if the cell is blank then it returns NA, otherwise it will return the cell itself
   
+ISERROR() - returns TRUE or FALSE, consider missing values as error
+ISERR() - does not consider missing value as error
+
+
+#CELL ADDRESSES
 
 
 
