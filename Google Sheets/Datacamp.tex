@@ -59,6 +59,16 @@ NORMINV(RAND(), 0, 1) - uses to generate random numbers to create uniform number
 NORM(RAND()) - same shit
 
 #Logical Operations
+NOT(cell) - reverses true and false
+AND(cell,cell) - accepts TRUE and FALSE only and returns either TRUE or FALSE. Note: it can take multiple cells
+OR(cell,cell)
+
+#FLOW control (If statements):
+IF(cell,"printed if true", "printed if not")
+e.g. if cell is TRUE or FALSE, then. IF(TRUE, "1st", "2nd") returns 1st
+e.g IF(cell > 0, "postive", "negative")
+If you want to do a lot of conditions, use IFS()
+e.g IFS(A2, "1st", B2, "2nd")
   
 
 
