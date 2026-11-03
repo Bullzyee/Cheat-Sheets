@@ -3,5 +3,88 @@
 # you can also use "letterpaper" instead of a4paper
 
 
-#TABLES
+#CREATING PROFESSIONAL TABLES
+
+\begin{tabular}{spec} #the spec defines your column: 'l' - left-aligned; 'c' - center aligned; 'r' - right aligned
+
+& - separate cells
+\\ - ends each row
+
+You can also use \begin{tabluar}{l c r} - the table will look like this:
+The first column aligns at the left side, the second column aligns at the middle, and the third column aligns to the right
+#Rule of thumb: text - left-aligned; numbers - right-aligned
+
+#Sample Code:
+#We have 3 columns
+\begin{tabular}{l c r}
+Joseph & Physics & 92 \\
+Zion & Mathematics & 75 \\
+Bob & Agriculture 97 \\
+\end{tabular}
+
+#Adding Rules to the table
+
+\hline - place between rows or at the top and bottom
+| - Pipe in column specs
+
+e.g.
+\begin{tabular}{l| c| r|} #will make the column have border line
+Joseph & Physics & 92 \\
+\hline #inserts horizontal line per row
+Zion & Mathematics & 75 \\
+\hline 
+Bob & Agriculture 97 \\
+\hline
+\end{tabular}
+P.S You can manipulate the text by using several codes such as \textbf{}
+
+Another example (Professional Table):
+\begin{tabular}{|l|c|r|}
+    \hline
+     \textbf{Subject} & \textbf{Name} & \textbf{Grade}  \\
+     \hline
+     Math 27 & Zion Busto & 75\\
+     Math 28 & Joseph & 69\\
+     Math 101 & Sabangan & 55\\
+     \hline
+\end{tabular}
+\end{center}
+
+
+#For spanning columns, the syntax is 
+
+\multicolumn{number}{alignment}{text}
+
+number - how many columns to merge
+alignment - l,c, or r: add | for borders
+text - content shown in the merged cell
+IMPORTANT: Include | in the alignment argument to make the borders consistent
+
+e.g.
+\begin{tabular}{|l|l|r|}
+\hline
+\multicolumn{3}{|c|}{Weekley Expenses}\\
+\hline
+\hline
+Day       & Category      & Amount \\
+\hline
+Monday    & Groceries     & 45.00 \\
+Wednesday & Transport     & 12.50 \\
+Friday    & Entertainment & 30.00 \\
+\hline
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
