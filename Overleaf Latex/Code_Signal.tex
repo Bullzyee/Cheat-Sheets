@@ -81,10 +81,36 @@ Friday    & Entertainment & 30.00 \\
 To display, \includegraphics[width = 0.5 \textwidth]{photo.jpg}, you can also use scale = value. it multiplies the image size to its value
 When you only use width, overleaf will automatically converts height equal to width 
 
+#FIGURE FLOATS AND CAPTIONS
+\usepackage[draft]{graphicx}
+syntax:
+\begin{figure}[placement specifier]
+ \centering
+ \includgraphics[width = 0.6 \textwidth]{picture.jpg}
+\end{figure}
+Placement specifier:
+h - approximately here in textflow
+t - top of the page
+b - bottom of the page
+p - dedicate page of floats
+ht - try here, then top
+htb - here, top, bottom #best
 
+To have labels and cross reference, use \label{fig:Sunset} and \ref{fig:Sunset}
+Prefix with fig to distinguish from section or table labels
+use \ref{fig:Sunset} if you want to mention the name of the image in the description
+e.g.
+\begin{figure}[placement specifier]
+ \centering
+ \includgraphics[width = 0.6 \textwidth]{picture.jpg}
+ \caption{A sunset}
+ \label{fig:sunset}
+\end{figure}
+Then refer to figure \ref{fig:sunset}
 
-
-
+#NEXT UNIT: Writing Math in LaTeX
+#Entering Math Mode
+You can either use dollar sign to wrap or  wrap the expression in \[..\] -- recommendation for long math 
 
 
 
