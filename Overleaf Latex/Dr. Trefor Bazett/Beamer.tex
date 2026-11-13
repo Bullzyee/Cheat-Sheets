@@ -1,0 +1,82 @@
+#You can choose template in overleaf for presentations
+#Use \section{} or \subsection{} to navigate your slides easily using the navigation tool
+#Preamble
+
+\documentclass{beamer} or \documentcalss[14pt, aspectratio=169]{beamer}
+
+
+\usepackage[utf8]{inputenc}
+\setbeamertemplate{naviagtion symbols}{} #hides the navigation buttons at bottom
+\title{Title of Presentation}
+\author{Zion Busto}
+\date{\today}
+
+\begin{document}
+
+\end{document}
+
+
+
+#to create table of contents or agendas:
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+#To create slide:
+#use \setbeamercovered{transparent}#to see the future slide on a list or something
+
+\begin{frame}{Frame Title}
+	#sample contents
+	#If you want to appear you items individually, per slide, you can use <<beginning number of slide>->
+	\begin{itemize}
+		\item<1-> Pencil
+		\item<2 -> John Wick
+		\item<3 -> Book
+	\end{itemize}
+	#we use <1-> to not repeat \begin{frame} three times
+	\onslide<2>{<something>} #meeaning, you only want this slide to appear on the second slide
+	\onslide<2>{<something>}
+
+	I can do an \alert<1>{Alert} #makes the Alert text red. You can also use \textbf{}
+\end{frame}
+
+
+\begin{frame}{<Frame Title>}
+
+	\begin{block}{<title>} #Make a highlighted blue recatangle where you can put a title
+		#some text
+	\end{block}
+	
+	\begin{example} #Make a highlighted green recatangle where you can put a title
+		#some text
+	\end{example}
+
+	\begin{theorem}[Title of Theorem]
+
+	\end{theorem}
+
+	\begin{proof}<2> #<2> means hides the proof on the first slide of the frame and it appears on the second slide of the frame
+	\end{proof}
+
+\end{frame}
+
+\begin{frame}{Two column Frame}
+	
+	\begin{columns}
+	\column{0.5\textwidth} Text blabla #first column
+	Text blabla
+	\column{0.5\textwidth} #second column
+	Text blabla
+	\end{columns}
+	
+\end{frame}
+
+
+#NOTE: if you want to print it, for example 4 slides per page. Use:
+
+\documentclass[14pt, aspectratio = 169, handout]{beamer}
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}{a4paper, border shrink = 5mm} #4slides on 1 paper
+
