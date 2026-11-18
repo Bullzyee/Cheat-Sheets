@@ -1,0 +1,146 @@
+
+#Some math functions
+
+\iint - double integral (amsmath)
+\iiint - triple integral
+\oint - countour integral
+
+When you have several unrelated equations to display together, there's nothing 
+to line up — you just want each one centered. That's gather (and gather*): \begin{gather*}
+
+
+#Matrices and Piecewise Function:
+
+Matrices use the same symbols that you've now become familiar with when 
+typing mathematical expressions:
+
+& - separates columns
+\\ - separate rows
+
+#1x1 matrix:
+
+\vmatrix - |a| single vertical bars
+\Vmatrix - ||a|| double vertical bars
+
+#MATRIX - no delimeters:
+
+\begin{matrix}
+ a & b\\
+ c & d\\
+
+\end{matrix}
+
+#PMATRIX - has delimeters, but parentheses:
+
+\begin{pamatrix}
+ a & b\\
+ c & d\\
+\end{pmatrix}
+
+#bmatrix - square brackets:
+
+\begin{bmatrix}
+
+ #paramaeters
+
+\end{bmatrix}
+
+#Bmatrix - curly braces
+
+\begin{Bmatrix}
+
+
+#vmatrix - determinant
+
+#Vmatrix - double bars, like double determinant
+
+#smallmatrix - often use for inline math
+
+
+#USING DOTS IN MATHEMATICAL STATEMENTS: e.g. matrix with diagonal dots
+
+\ldots - Low dots, sitting on the baseline. Use them between commas — lists and sequences.
+
+\cdots - Centered dots, raised to the middle of the line. Use them between operators such as + or =.
+
+\vdots - Vertical dots. Continues a column downward.
+
+\ddots - Diagonal dots. Continues a leading diagonal down and to the right.
+
+
+\hdotsfor{n} - Fills n columns of a matrix row with dots (needs amsmath). Handy for omitting a whole row. Example output can be seen below:
+
+(a b c) #assume that this ia  a 2x3 matrix
+(......)    
+
+ 
+#PIECEWISE FUNCTION: cases function
+
+e.g. The code is like a matrix code wit nx2
+
+\begin{equation}
+
+|x| = \begin{cases} x & \text{if } x \geq 0 \\ 
+                   -x & \text{if } x < 0 
+	\end{cases} 
+
+\end{equation}
+
+
+#THEOREMS, DEFINITIONS, AND REMARKS: use \usepackage{amsthm}:
+In the preamble:
+
+\newtheorem{environment name}{heading text} - Use as many \newtheorem declarations as you like — lemma, corollary, definition, example, remark — and each will  have its own counter number.
+
+environment name -  the environment name you'll type to begin that structure.  This name is not predefined for you and can be a full word (lemma) or abbreviation (lem).  
+You decide on the term that you'll want to type throughout your document.
+
+
+heading text - the heading word that appears in the document
+
+Basically, you are creating your own command:
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+
+\begin{theorem}
+
+
+\end{theorem}
+
+
+\end{document}
+
+
+
+#Numbering
+
+\newtheorem{theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{remark}{Remark} - unnembered version
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
